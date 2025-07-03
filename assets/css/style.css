@@ -1,0 +1,189 @@
+/* Apply royal blue gradient background to body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #3667c1, #0c2160);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+#sidebar-wrapper {
+  background-color: #000;
+  min-width: 250px;
+  min-height: 100vh;
+  color: white;
+  padding-top: 20px;
+}
+
+.sidebar-heading {
+  font-size: 1.5rem;
+  padding: 20px;
+  border-bottom: 1px solid #444;
+  text-align: center;
+}
+
+#sidebar-wrapper .list-group-item {
+  background: transparent;
+  color: white;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* White outlined Add Category button */
+#sidebar-wrapper .btn {
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+#sidebar-wrapper .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Page content style */
+#page-content-wrapper {
+  padding: 40px;
+}
+
+/* Card Style */
+.card {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-left: 5px solid #4169E1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button gradient */
+.btn-primary {
+  background: linear-gradient(to right, #002366, #4169E1);
+  border: 2 px solid #ced5e0;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #001c4d, #3658c8);
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 12px;
+  color: black;
+}
+
+.modal-header {
+  background: #002366;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.completed-task {
+  background-color: #e6e6e6;
+  opacity: 0.85;
+}
+
+.completed-task .card-title span {
+  text-decoration: line-through;
+  color: #555;
+}
+
+#todays-tasks-panel {
+  position: fixed;
+  top: 270px;
+  right: 20px;
+  width: 300px;
+  max-height: 90vh;
+  overflow: hidden;
+  z-index: 1050;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+#todays-tasks-panel .scroll-area {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+#todays-tasks-panel .card {
+  background: white;
+  color: black;
+}
+
+.completed-task {
+  background-color: #f1f1f1 !important;
+  opacity: 0.85;
+}
+
+.overdue-task {
+  background-color: rgba(255, 0, 64, 0.1); /* soft red/pink tint */
+  border-left: 5px solid #ff4d4d;
+}
+
+.completed-task .card-title span {
+  text-decoration: line-through;
+  color: #555;
+}
+/* Sidebar basic style */
+#sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #000000; /* solid black */
+  color: white;
+  padding-top: 60px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Hide sidebar */
+#wrapper.toggled #sidebar-wrapper {
+  transform: translateX(-250px);
+}
+
+/* Page content should shift */
+#page-content-wrapper {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  margin-left: 0;
+}
+
+/* Toggle button style */
+#menu-toggle {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  background-color: #0d47a1;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.2s ease;
+}
+
+#menu-toggle:hover {
+  background-color: #1565c0;
+}
